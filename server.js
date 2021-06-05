@@ -11,9 +11,11 @@ app.use(cookieParser());  // parse the cookies
 app.use(cors({credentials: true, origin: ['http://localhost:3000']}));
 
 
-const addRoutes = require('./routes/users.route');
+const addRoutes = require('./api/user/users.route');
 addRoutes(app);
 
 app.listen(PORT, () => {
   console.log('server is listening')
 });
+
+
